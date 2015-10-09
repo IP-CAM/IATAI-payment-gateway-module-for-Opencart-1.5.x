@@ -35,8 +35,8 @@ $_['default_testsecretkey'] = '24d2d873eb06ab744b4986635df84c3e4d57b91aa626daf45
 
 $_['entry_confirmurl']	= 'WSDL Web Service Url:';
 $_['help_confirmurl']	= 'URL used to verify the Transaction state';
-$_['entry_testconfirmurl']  = 'Test WSDL Web Service //$_['entry_order_status_expired'] = 'Order status after payment is expired:';
-//$_['help_order_status_expired'] = 'This is the state the order gets when the transaction is EXPIRED';Url:';
+$_['entry_testconfirmurl']  = 'Test WSDL Web Service';
+
 $_['entry_confirmuserpass']  = 'User & Password for WSDL Web Service';
 $_['help_testconfirmurl']  = 'URL used to verify the Transaction state in Test Mode';
 $_['help_confirmuserpass']  = 'User & password provided by Iatai';
@@ -44,7 +44,8 @@ $_['default_confirmurl'] = 'https://secure.allegraplatform.com/GatewayIatai/IPPG
 $_['default_testconfirmurl'] = 'http://pruebas.allegraplatform.com/GatewayIatai/IPPG?wsdl';
 $_['default_testconfirmuser'] = 'cert';
 $_['default_testconfirmpass'] = 'cert';
-
+//$_['entry_order_status_expired'] = 'Order status after payment is expired:';
+//$_['help_order_status_expired'] = 'This is the state the order gets when the transaction is EXPIRED';Url:';
 $_['entry_test']        = 'Checkout Mode:';
 $_['help_test']        = 'Use this option to switch between transactions options.';
 $_['entry_test_on']     = 'Test';
