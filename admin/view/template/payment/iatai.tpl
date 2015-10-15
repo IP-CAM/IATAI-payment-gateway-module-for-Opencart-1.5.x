@@ -8,7 +8,7 @@
             document.getElementById('iatai_accesskey').disabled=true;
             document.getElementById('iatai_secretkey').disabled=true;
             document.getElementById('iatai_liveurl').disabled=true;
-            document.getElementById('iat//$_['default_liveurl']    = 'https://secureacceptance.allegraplatform.com';ai_confirmurl').disabled=true;
+            document.getElementById('iatai_confirmurl').disabled=true;
             document.getElementById('iatai_confirmuser').disabled=true;
             document.getElementById('iatai_confirmpass').disabled=true;
             // enable test fields
@@ -83,7 +83,6 @@
                 <option value="1" <?php echo $st1; ?> ><?php echo $entry_test_on; ?></option>
                 <option value="0" <?php echo $st0; ?> ><?php echo $entry_test_off; ?></option>
               </select></td>
-          </tr>//$_['default_liveurl']    = 'https://secureacceptance.allegraplatform.com';
           <tr>
             <td colspan="2">
               <h3 class="heading">Live Checkout Options</h4>
