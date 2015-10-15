@@ -11,7 +11,7 @@ class ControllerPaymentIatai extends Controller {
 		$this->load->language('payment/iatai');
 		$this->document->setTitle($this->language->get('heading_title'));
 		$this->load->model('setting/setting');
-		$this->document->addStyle('view/stylesheet/iatai.css')
+		$this->document->addStyle('view/stylesheet/iatai.css');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			$this->model_setting_setting->editSetting('iatai', $this->request->post);
