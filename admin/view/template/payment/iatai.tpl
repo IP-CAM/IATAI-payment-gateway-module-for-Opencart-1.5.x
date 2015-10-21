@@ -8,7 +8,7 @@
             document.getElementById('iatai_accesskey').disabled=true;
             document.getElementById('iatai_secretkey').disabled=true;
             document.getElementById('iatai_liveurl').disabled=true;
-            document.getElementById('iatai_confirmurl').disabled=true;
+	    document.getElementById('iatai_confirmurl').disabled=true;
             document.getElementById('iatai_confirmuser').disabled=true;
             document.getElementById('iatai_confirmpass').disabled=true;
             // enable test fields
@@ -83,8 +83,10 @@
                 <option value="1" <?php echo $st1; ?> ><?php echo $entry_test_on; ?></option>
                 <option value="0" <?php echo $st0; ?> ><?php echo $entry_test_off; ?></option>
               </select></td>
+          </tr>
           <tr>
             <td colspan="2">
+            <table><tr><td valign="top">
               <h3 class="heading">Live Checkout Options</h4>
               <table class="inner-table">
                 <tr>
@@ -106,7 +108,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_secretkey; ?>
                     <span><?php echo $help_secretkey; ?></span></td>
-                  <td><textarea name="iatai_secretkey" id="iatai_secretkey" cols="80" rows="8"><?php echo $iatai_secretkey; ?></textarea>
+                  <td><textarea name="iatai_secretkey" id="iatai_secretkey" cols="55" rows="8"><?php echo $iatai_secretkey; ?></textarea>
                     <?php if ($iatai_test==0&&$iatai_secretkey=='') { ?>
                     <span class="error"><?php echo $error_secretkey; ?></span>
                     <?php } ?></td>
@@ -114,15 +116,15 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_liveurl; ?>
                     <span><?php echo $help_liveurl; ?></span></td>
-                  <td><input type="text" style="width:500px;" id="iatai_liveurl" name="iatai_liveurl" value="<?php echo ($iatai_liveurl)?$iatai_liveurl:$default_liveurl; ?>" />
+                  <td><input type="text" style="width:430px;" id="iatai_liveurl" name="iatai_liveurl" value="<?php echo ($iatai_liveurl)?$iatai_liveurl:$default_liveurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_liveurl=='') { ?>
                     <span class="error"><?php echo $error_liveurl; ?></span>
-                    <?php } ?></td>
+                    <?php } ?></td></td>
                 </tr>
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_confirmurl; ?>
                     <span><?php echo $help_confirmurl; ?></span></td>
-                  <td><input type="text" style="width:500px;" id="iatai_confirmurl" name="iatai_confirmurl" value="<?php echo ($iatai_confirmurl)?$iatai_confirmurl:$default_confirmurl; ?>" />
+                  <td><input type="text" style="width:430px;" id="iatai_confirmurl" name="iatai_confirmurl" value="<?php echo ($iatai_confirmurl)?$iatai_confirmurl:$default_confirmurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_confirmurl=='') { ?>
                     <span class="error"><?php echo $error_confirmurl; ?></span>
                     <?php } ?></td>
@@ -130,17 +132,15 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_confirmuserpass; ?>
                     <span><?php echo $help_confirmuserpass; ?></span></td>
-                  <td>User: <input type="text" style="width:200px;" id="iatai_confirmuser" name="iatai_confirmuser" value="<?php echo ($iatai_confirmuser)?$iatai_confirmuser:$default_testconfirmuser; ?>" /> Pass:<input type="text" style="width:200px;" id="iatai_confirmpass" name="iatai_confirmpass" value="<?php echo ($iatai_confirmpass)?$iatai_confirmpass:$default_testconfirmpass; ?>" />
+                  <td>User: <input type="text" style="width:200px;" id="iatai_confirmuser" name="iatai_confirmuser" value="<?php echo ($iatai_confirmuser)?$iatai_confirmuser:$default_testconfirmuser; ?>" /><br /> Pass:<input type="text" style="width:200px;" id="iatai_confirmpass" name="iatai_confirmpass" value="<?php echo ($iatai_confirmpass)?$iatai_confirmpass:$default_testconfirmpass; ?>" />
                     <?php if ($iatai_test==0&&($iatai_confirmuser==''||$iatai_confirmpass=='')) { ?>
                     <span class="error"><?php echo $error_confirmuserpass; ?></span>
                     <?php } ?></td>
                 </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h4>Test Checkout Options</h4>
+                </table>
+	    </td>
+            <td valign="top">
+              <h3>Test Checkout Options</h3>
               <table class="inner-table-test">
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testprofileid; ?>
@@ -161,7 +161,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testsecretkey; ?>
                     <span><?php echo $help_testsecretkey; ?></span></td>
-                  <td><textarea name="iatai_testsecretkey" id="iatai_testsecretkey" cols="80" rows="8"><?php echo ($iatai_testsecretkey)?$iatai_testsecretkey:$default_testsecretkey; ?></textarea>
+                    <td><textarea name="iatai_testsecretkey" id="iatai_testsecretkey" cols="55" rows="8"><?php echo ($iatai_testsecretkey)?$iatai_testsecretkey:$default_testsecretkey; ?></textarea>
                     <?php if ($iatai_test==1&&$iatai_testsecretkey=='') { ?>
                     <span class="error"><?php echo $error_secretkey; ?></span>
                     <?php } ?></td>
@@ -169,7 +169,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testurl; ?>
                     <span><?php echo $help_testurl; ?></span></td>
-                  <td><input type="text" style="width:500px;" name="iatai_testurl" id="iatai_testurl" value="<?php echo ($iatai_testurl)?$iatai_testurl:$default_testurl; ?>" />
+                  <td><input type="text" style="width:430px;" name="iatai_testurl" id="iatai_testurl" value="<?php echo ($iatai_testurl)?$iatai_testurl:$default_testurl; ?>" />
                     <?php if ($iatai_test==1&&$iatai_testurl=='') { ?>
                     <span class="error"><?php echo $error_liveurl; ?></span>
                     <?php } ?></td>
@@ -177,7 +177,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testconfirmurl; ?>
                     <span class="help"><?php echo $help_testconfirmurl; ?></span></td>
-                  <td><input type="text" style="width:500px;" id="iatai_testconfirmurl" name="iatai_testconfirmurl" value="<?php echo ($iatai_testconfirmurl)?$iatai_testconfirmurl:$default_testconfirmurl; ?>" />
+                  <td><input type="text" style="width:430px;" id="iatai_testconfirmurl" name="iatai_testconfirmurl" value="<?php echo ($iatai_testconfirmurl)?$iatai_testconfirmurl:$default_testconfirmurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_testconfirmurl=='') { ?>
                     <span class="error"><?php echo $error_confirmurl; ?></span>
                     <?php } ?></td>
@@ -185,12 +185,13 @@
                 <tr>
                   <td><span class="required">*</span> Test <?php echo $entry_confirmuserpass; ?>
                     <span><?php echo $help_confirmuserpass; ?></span></td>
-                  <td>User: <input type="text" style="width:200px;" id="iatai_testconfirmuser" name="iatai_testconfirmuser" value="<?php echo ($iatai_testconfirmuser)?$iatai_testconfirmuser:$default_testconfirmuser; ?>" /> Pass:<input type="text" style="width:200px;" id="iatai_testconfirmpass" name="iatai_testconfirmpass" value="<?php echo ($iatai_testconfirmpass)?$iatai_testconfirmpass:$default_testconfirmpass; ?>" />
+                  <td>User: <input type="text" style="width:200px;" id="iatai_testconfirmuser" name="iatai_testconfirmuser" value="<?php echo ($iatai_testconfirmuser)?$iatai_testconfirmuser:$default_testconfirmuser; ?>" /><br /> Pass:<input type="text" style="width:200px;" id="iatai_testconfirmpass" name="iatai_testconfirmpass" value="<?php echo ($iatai_testconfirmpass)?$iatai_testconfirmpass:$default_testconfirmpass; ?>" />
                     <?php if ($iatai_test==0&&($iatai_testconfirmuser==''||$iatai_testconfirmpass=='')) { ?>
                     <span class="error"><?php echo $error_confirmuserpass; ?></span>
                     <?php } ?></td>
                 </tr>
               </table>
+            </td></tr></table>
             </td>
           </tr>
           <tr>
@@ -273,7 +274,4 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-    check_status();
-</script>
 <?php echo $footer; ?>
