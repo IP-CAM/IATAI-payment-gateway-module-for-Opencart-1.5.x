@@ -108,7 +108,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_secretkey; ?>
                     <span><?php echo $help_secretkey; ?></span></td>
-                  <td><textar>ea name="iatai_secretkey" id="iatai_secretkey" cols="45" rows="8"><?php echo $iatai_secretkey; ?></textarea>
+                  <td><textarea name="iatai_secretkey" id="iatai_secretkey" cols="45" rows="8"><?php echo $iatai_secretkey; ?></textarea>
                     <?php if ($iatai_test==0&&$iatai_secretkey=='') { ?>
                     <span class="error"><?php echo $error_secretkey; ?></span>
                     <?php } ?></td>
@@ -169,7 +169,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testurl; ?>
                     <span><?php echo $help_testurl; ?></span></td>
-                  <td><input type="text" style="width:430px;" name="iatai_testurl" id="iatai_testurl" value="<?php echo ($iatai_testurl)?$iatai_testurl:$default_testurl; ?>" />
+                  <td><input type="text" style="width:350px;" name="iatai_testurl" id="iatai_testurl" value="<?php echo ($iatai_testurl)?$iatai_testurl:$default_testurl; ?>" />
                     <?php if ($iatai_test==1&&$iatai_testurl=='') { ?>
                     <span class="error"><?php echo $error_liveurl; ?></span>
                     <?php } ?></td>
@@ -177,7 +177,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_testconfirmurl; ?>
                     <span class="help"><?php echo $help_testconfirmurl; ?></span></td>
-                  <td><input type="text" style="width:430px;" id="iatai_testconfirmurl" name="iatai_testconfirmurl" value="<?php echo ($iatai_testconfirmurl)?$iatai_testconfirmurl:$default_testconfirmurl; ?>" />
+                  <td><input type="text" style="width:350px;" id="iatai_testconfirmurl" name="iatai_testconfirmurl" value="<?php echo ($iatai_testconfirmurl)?$iatai_testconfirmurl:$default_testconfirmurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_testconfirmurl=='') { ?>
                     <span class="error"><?php echo $error_confirmurl; ?></span>
                     <?php } ?></td>
