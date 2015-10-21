@@ -87,7 +87,8 @@ class ControllerPaymentIatai extends Controller {
 				'error_liveurl', 
 				'error_confirmurl',
 				"entry_test_on", 
-				"entry_test_off"
+				"entry_test_off",
+                "error_confirmuserpass"
 		);
 
 		foreach ($arr as $v) $this->data[$v] = $this->language->get($v);
