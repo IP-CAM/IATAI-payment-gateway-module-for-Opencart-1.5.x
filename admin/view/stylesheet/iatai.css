@@ -43,8 +43,8 @@ width: 300px;
 
 .inner-table-test{
 	border:1px solid #ccc;
-    background-color: antiquewhite;
-	width: 800px;
+    background-color: #F6F6F6;
+	width: 600px;
 }
 .inner-table-test td{
 	padding: 10px;

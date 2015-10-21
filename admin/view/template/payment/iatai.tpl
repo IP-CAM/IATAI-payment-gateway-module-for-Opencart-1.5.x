@@ -90,7 +90,7 @@
               <h3 class="heading">Live Checkout Options</h4>
               <table class="inner-table">
                 <tr>
-                  <td><span class="required">*</span> <?php echo $entry_profileid; ?>
+                  <td width="200"><span class="required">*</span> <?php echo $entry_profileid; ?>
                     <span><?php echo $help_profileid; ?></span></td>
                   <td><input type="text" id="iatai_profileid" name="iatai_profileid" value="<?php echo $iatai_profileid; ?>" />
                     <?php if ($iatai_test==0&&$iatai_profileid=='') { ?>
@@ -108,7 +108,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_secretkey; ?>
                     <span><?php echo $help_secretkey; ?></span></td>
-                  <td><textarea name="iatai_secretkey" id="iatai_secretkey" cols="55" rows="8"><?php echo $iatai_secretkey; ?></textarea>
+                  <td><textar>ea name="iatai_secretkey" id="iatai_secretkey" cols="45" rows="8"><?php echo $iatai_secretkey; ?></textarea>
                     <?php if ($iatai_test==0&&$iatai_secretkey=='') { ?>
                     <span class="error"><?php echo $error_secretkey; ?></span>
                     <?php } ?></td>
@@ -116,7 +116,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_liveurl; ?>
                     <span><?php echo $help_liveurl; ?></span></td>
-                  <td><input type="text" style="width:430px;" id="iatai_liveurl" name="iatai_liveurl" value="<?php echo ($iatai_liveurl)?$iatai_liveurl:$default_liveurl; ?>" />
+                  <td><input type="text" style="width:350px;" id="iatai_liveurl" name="iatai_liveurl" value="<?php echo ($iatai_liveurl)?$iatai_liveurl:$default_liveurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_liveurl=='') { ?>
                     <span class="error"><?php echo $error_liveurl; ?></span>
                     <?php } ?></td></td>
@@ -124,7 +124,7 @@
                 <tr>
                   <td><span class="required">*</span> <?php echo $entry_confirmurl; ?>
                     <span><?php echo $help_confirmurl; ?></span></td>
-                  <td><input type="text" style="width:430px;" id="iatai_confirmurl" name="iatai_confirmurl" value="<?php echo ($iatai_confirmurl)?$iatai_confirmurl:$default_confirmurl; ?>" />
+                  <td><input type="text" style="width:350px;" id="iatai_confirmurl" name="iatai_confirmurl" value="<?php echo ($iatai_confirmurl)?$iatai_confirmurl:$default_confirmurl; ?>" />
                     <?php if ($iatai_test==0&&$iatai_confirmurl=='') { ?>
                     <span class="error"><?php echo $error_confirmurl; ?></span>
                     <?php } ?></td>
@@ -143,7 +143,7 @@
               <h3>Test Checkout Options</h3>
               <table class="inner-table-test">
                 <tr>
-                  <td><span class="required">*</span> <?php echo $entry_testprofileid; ?>
+                  <td width="200"><span class="required">*</span> <?php echo $entry_testprofileid; ?>
                     <span><?php echo $help_testprofileid; ?></span></td>
                   <td><input type="text" id="iatai_testprofileid" id="iatai_testprofileid" name="iatai_testprofileid" value="<?php echo ($iatai_testprofileid)?$iatai_testprofileid:$default_testprofileid; ?>" />
                     <?php if ($iatai_test==1&&$iatai_testprofileid=='') { ?>
